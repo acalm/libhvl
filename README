@@ -4,7 +4,7 @@ This is my attempt to maintain the hively replayer sources.
 
 INSTALL IT
 -----------
-Run ./autogen.sh, ./configure then make.
+Run make.
 
 
 

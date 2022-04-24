@@ -5,9 +5,9 @@
 #include <math.h>
 
 #include <assert.h>
-#include <SDL/SDL.h>
+#include <SDL2/SDL.h>
 
-#include <hvl/hvl_replay.h>
+#include "hvl_replay.h"
 
 #define FREQ 48000
 #define HIVELY_LEN FREQ/50
@@ -26,7 +26,7 @@ BOOL init( void )
   uint32 i;
   SDL_AudioSpec wanted;
 
-  if(SDL_Init(SDL_INIT_AUDIO)< 0) {
+  if(SDL_InitSubSystem(SDL_INIT_AUDIO)< 0) {
     printf("Could not initialize SDL: %s\n", SDL_GetError());
     SDL_Quit();
     return FALSE;
