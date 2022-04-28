@@ -1,10 +1,3 @@
-# GNU Makefile for vkQuake unix targets
-# You need the SDL2 library fully installed.
-# "make DEBUG=1" to build a debug client.
-# "make SDL_CONFIG=/path/to/sdl2-config" for unusual SDL2 installations.
-# "make DO_USERDIRS=1" to enable user directories support
-# "make VULKAN_SDK=/path/to/sdk" if it is not already in path
-
 check_gcc = $(shell if echo | $(CC) $(1) -Werror -S -o /dev/null -xc - > /dev/null 2>&1; then echo "$(1)"; else echo "$(2)"; fi;)
 
 # ---------------------------
